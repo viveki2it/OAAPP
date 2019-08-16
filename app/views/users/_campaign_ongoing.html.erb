@@ -1,0 +1,29 @@
+<!-- Form Start -->               
+<div class="container-fluid homeheaderbg2">
+  <div class="container">  
+    <div class="row">                                                    
+      <div class="form2">
+        <div class="photo">
+          <img src="<%= asset_path('image-popup.png') %>" alt="LTHR" />
+        </div>
+        <div class="formbox">
+          <div class="content-close"><button class="btn-close">X</button></div>
+          <div class="head-formbox">
+            <p><img src="<%= asset_path('lthr.svg') %>" alt="LTHR"/></p>
+          </div>       
+          <div class="content-formbox">
+            <p class="popup-title">BE THE FIRST TO KNOW </p>
+            <p class="popup-subtitle">About new products, events and more...</p>            
+            <%= form_for @user, :url => { :action => "create" }, :html => {:class => "form-inline"} do |f| %>
+              <%= f.text_field :first_name, :placeholder => "Enter First Name", :class => "emailbox2" %> <br> 
+              <%= f.text_field :email, :placeholder => "Enter Email", :class => "emailbox2" %> <br> 
+              <input class="btn lima" type="submit" value="STEP INSIDE" />
+            <% end %>
+          </div> 
+        </div>  
+        <div class="clearfix"></div>  
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Form End -->  

@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1, shrink-to-fit=no">  
     <title>LTHR</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="LTHR">
+    <meta name="twitter:title" content="LTHR">
+    <meta name="twitter:description" content="Earn: Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+    <meta name="twitter:creator" content="LTHR">
+    <meta name="twitter:image:type" content="image/jpeg">
+    <meta name="twitter:image" content="<%= Rails.application.config.action_mailer.default_url_options[:host] %>/assets/image-popup.png">
+    <meta name="twitter:domain" content="<%= Rails.application.config.action_mailer.default_url_options[:host] %>">
+    <meta property="og:title" content="LTHR" />
+    <meta property="og:description" content="Earn: Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image" content="<%= Rails.application.config.action_mailer.default_url_options[:host] %>/assets/image-popup.png" />    
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
   </head>
 
   <body>
     <%= yield %>
+    <%= render 'toastr_rails/flash' %>
   </body>
 </html>
