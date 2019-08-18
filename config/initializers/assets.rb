@@ -12,3 +12,5 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
+Rails.application.config.assets.precompile += Dir["#{Rails.root}/app/assets/javascripts/**/*"].reject {|f| File.directory? f} +
+Dir["#{Rails.root}/app/assets/stylesheets/**/*"].reject {|f| File.directory? f}
