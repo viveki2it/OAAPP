@@ -4,20 +4,22 @@
     <div class="row">                                                    
       <div class="form2">
         <div class="photo">
-          <img src="<%= asset_path('image-popup.png') %>" alt="LTHR" />
+          <img src="/assets/rectangle.png" srcset="/assets/rectangle-2x.png" alt="OA" />
         </div>
         <div class="formbox">
+          <div class="borde"></div>
           <div class="content-close"><button class="btn-close">X</button></div>
           <div class="head-formbox">
-            <p><img src="<%= asset_path('lthr.svg') %>" alt="LTHR"/></p>
+            <p><img src="<%= asset_path('logoOA.svg') %>" alt="OA"/></p>
           </div>       
           <div class="content-formbox">
-            <p class="popup-title">BE THE FIRST TO KNOW </p>
-            <p class="popup-subtitle">About new products, events and more...</p>            
+            <p class="popup-title">Be the first to know! </p>
+            <p class="popup-subtitle">About new products, events and more…</p>
+
             <%= form_for @user, :url => { :action => "create" }, :html => {:class => "form-inline"} do |f| %>
               <%= f.text_field :first_name, :placeholder => "Enter First Name", :class => "emailbox2" %> <br> 
               <%= f.text_field :email, :placeholder => "Enter Email", :class => "emailbox2" %> <br> 
-              <input class="btn lima" type="submit" value="STEP INSIDE" />
+              <input class="btn lightblue" type="submit" value="Register" />
             <% end %>
           </div> 
         </div>  

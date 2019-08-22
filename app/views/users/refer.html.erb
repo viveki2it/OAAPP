@@ -11,108 +11,80 @@
 
       </div>		
       <div class="col-md-5 col-xs-12 rightbox">  
-        <p class="title-thankyou">THANK YOU FOR SIGNING UP <br>AND REMEMBER…</p>
+        <p class="title-thankyou">Thank you for signing up!</p>
+				<p class="title2-thankyou">Invite a friend & earn products</p>   
         <p class="subtitle-thankyou">Share your unique link below via email or social media to earn free products depending on how many friends enter their email address.</p>                                                   
         <p class="share-link">
           <input class="input" id="share-link" type="text" value="<%= root_url %>?ref=<%= @user.referral_code %>" readonly><button class="btn-copy" onclick="copy()">COPY</button>
         </p>
         <p class="social-share">
           <% twitter_message = "Earn: Lorem ipsum dolor sit amet, consectetur adipiscing elit." %>  
-          <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=LTHR" target="_blank"><img src="<%= asset_path('logo-fb.svg') %>" alt="Share on Facebook" /></a> 
-          <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" target="_blank"><img src="<%= asset_path('logo-tw.svg') %>" alt="Share on Twitter" /></a>
-        </p>                                                                           
+          <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=OA" target="_blank"><img src="<%= asset_path('logo-fb.svg') %>" alt="Share on Facebook" /></a> 
+          <a target="_blank" href="https://www.instagram.com/"><img src="/assets/logo-in.svg" alt="Share on Instagram"></a>
+          <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" target="_blank"><img src="<%= asset_path('logo-twitter.svg') %>" alt="Share on Twitter" /></a>
+        </p>                              
       </div>                       
     </div>		
   </div>
 </div>
 <!-- Header End -->
 
-  <!-- Steps Start -->
-  <div class="container-fluid">
-    <div class="container steps">
-      <div class="row">
-        <h2 class="steps-header text-center">HERE’S HOW IT WORKS</h2>
-      </div>
-      <div class="row steps-body">
-        <div class="col-md-3 text-center step">
-          <img class="step-img" src="<%= asset_path('step1.png') %>" srcset="<%= asset_path('step1-2x.png') %>" alt="Step 1">
-          <div class="step-body">
-            <h2 class="step-title">5 FRIENDS</h2>
-            <p class="step-content">Earn: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </div>
-        </div>
-        <div class="col-md-3 text-center step">
-          <img class="step-img" src="<%= asset_path('step2.png') %>" srcset="<%= asset_path('step2-2x.png') %>" alt="Step 2">
-          <div class="step-body">
-            <h2 class="step-title">10 FRIENDS</h2>
-            <p class="step-content">Earn: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </div>
-        </div>    
-        <div class="col-md-3 text-center step">
-          <img class="step-img" src="<%= asset_path('step3.png') %>" srcset="<%= asset_path('step3-2x.png') %>" alt="Step 3">
-          <div class="step-body">
-            <h2 class="step-title">15 FRIENDS</h2>
-            <p class="step-content">Earn: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </div>
-        </div>   
-        <div class="col-md-3 text-center step">
-          <img class="step-img" src="<%= asset_path('step4.png') %>" srcset="<%= asset_path('step4-2x.png') %>" alt="Step 4">
-          <div class="step-body">
-            <h2 class="step-title">20 FRIENDS</h2>
-            <p class="step-content">Earn: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </div>
-        </div>  
-      </div>
-      <div class="row">
-        <p class="step-extra-content">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit consectetur elit, at eleifend felis consequat eget. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse tristique fermentum viverra. Cras varius ac mauris ut porttitor. Donec in posuere nunc. Nullam pulvinar libero vel nunc sagittis, ac consequat orci imperdiet. Ut tincidunt, magna sed lobortis pharetra, mauris diam suscipit nisl, lobortis finibus nulla tortor a diam. Suspendisse ipsum eros, bibendum a elit non, fermentum aliquet odio.
-          <br><br>
-          Sed aliquet diam vitae tellus molestie, at ornare dolor hendrerit. Pellentesque bibendum volutpat blandit. Proin placerat semper nibh id dapibus. Proin id ante ac urna fermentum condimentum nec et elit. Donec vel libero justo. Sed volutpat porta quam at tempus. Morbi quis elit vitae felis faucibus elementum. Donec felis diam, scelerisque et tortor a, sodales imperdiet mi. Proin sagittis est nibh, rutrum tristique neque condimentum sed.
-          <br><br>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
-          Duis ornare nulla a magna laoreet, eget condimentum nunc pellentesque.<br>
-          Quisque aliquet quam vel magna placerat auctor.<br>
-          Nulla porttitor magna quis aliquam facilisis.<br>
-        </p>
-      </div>
-    </div>
-  </div>
-  <!-- Steps End -->
+<!-- Steps Start -->
+<div class="container-fluid">
+	<div class="container steps">
+		<div class="row">
+			<h2 class="steps-header text-center">HERE’S HOW IT WORKS</h2>
+		</div>
+		<div class="row steps-body">
+			<div class="col-md-3 text-center step">
+				<img class="step-img" src="/assets/001-support.svg" alt="5 FRIENDS">
+				<div class="step-body">
+					<h2 class="step-title">5 FRIENDS</h2>
+					<p class="step-content">Earn: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				</div>
+			</div>
+			<div class="col-md-3 text-center step">
+				<img class="step-img" src="/assets/002-team.svg" alt="10 FRIENDS">
+				<div class="step-body">
+					<h2 class="step-title">10 FRIENDS</h2>
+					<p class="step-content">Earn: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				</div>
+			</div>    
+			<div class="col-md-3 text-center step">
+				<img class="step-img" src="/assets/003-community.svg" alt="15 FRIENDS">
+				<div class="step-body">
+					<h2 class="step-title">15 FRIENDS</h2>
+					<p class="step-content">Earn: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				</div>
+			</div>   
+			<div class="col-md-3 text-center step">
+				<img class="step-img" src="/assets/004-team-1.svg" alt="20 FRIENDS">
+				<div class="step-body">
+					<h2 class="step-title">20 FRIENDS</h2>
+					<p class="step-content">Earn: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				</div>
+			</div>  
+		</div>
+	</div>  
+</div>
+<div class="container-fluid concrete-wall-bg">
+	<div class="container steps">
+		<div class="row">
+			<p class="step-extra-content">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit consectetur elit, at eleifend felis consequat eget. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse tristique fermentum viverra. Cras varius ac mauris ut porttitor. Donec in posuere nunc. Nullam pulvinar libero vel nunc sagittis, ac consequat orci imperdiet. Ut tincidunt, magna sed lobortis pharetra, mauris diam suscipit nisl, lobortis finibus nulla tortor a diam. Suspendisse ipsum eros, bibendum a elit non, fermentum aliquet odio.
+				<br><br>
+				Sed aliquet diam vitae tellus molestie, at ornare dolor hendrerit. Pellentesque bibendum volutpat blandit. Proin placerat semper nibh id dapibus. Proin id ante ac urna fermentum condimentum nec et elit. Donec vel libero justo. Sed volutpat porta quam at tempus. Morbi quis elit vitae felis faucibus elementum. Donec felis diam, scelerisque et tortor a, sodales imperdiet mi. Proin sagittis est nibh, rutrum tristique neque condimentum sed.
+				<br><br>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+				Duis ornare nulla a magna laoreet, eget condimentum nunc pellentesque.<br>
+				Quisque aliquet quam vel magna placerat auctor.<br>
+				Nulla porttitor magna quis aliquam facilisis.<br>
+			</p>
+		</div>
+	</div>
+</div>
+<!-- Steps End -->
 
-  <!-- Come Inside Start -->
-  <div class="container-fluid come-inside">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3 col-xs-12 text-center">	
-          <p class="title-come-inside">Come Inside To Pre-Order</p>
-
-          <p class="subtitle-come-inside">& Have The Chance To Win A Free LTHR!</p>
-          <form class="form-come-inside">
-            <input class="input email-come-inside" type="email" placeholder="Email">
-            <button class="btn lima btn-send">Come Inside To Learn More</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End Come Inside -->
-
-  <!-- Footer Start -->
-  <div class="container-fluid footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 col-xs-12 text-center">	
-          <p class="social-share-footer">
-            <a target="_blank" href="https://www.facebook.com/"><img src="<%= asset_path('logo-fb-1.svg') %>" alt="Share on Facebook"></a> 
-            <a target="_blank"  href="https://twitter.com/"><img src="<%= asset_path('logo-tw-1.svg') %>" alt="Share on Instagram"></a>
-            <a target="_blank" href="https://www.instagram.com/"><img src="<%= asset_path('logo-insta-1.svg') %>" alt="Share on Twitter"></a>
-            <a target="_blank" href="https://www.youtube.com/"><img src="<%= asset_path('logo-youtube.svg') %>" alt="Share on Youtube" width="37"></a> 
-          </p> 
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Footer End -->
 <script>
 function copy() {
   /* Get the text field */

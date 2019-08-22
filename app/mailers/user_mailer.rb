@@ -1,5 +1,5 @@
 class UserMailer < ActionMailer::Base
-  default from: "LTHR <welcome@lthr.com>"
+  default from: "OA <welcome@oa.com>"
 
   def signup_email(user)
     @user = user
