@@ -22,7 +22,7 @@ class User < ApplicationRecord
   end
 
   def send_welcome_email
-    UserMailer.signup_email(self).deliver_now
+    UserMailer.signup_email(self).deliver_later
   end
 
 end
