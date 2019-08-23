@@ -80,6 +80,22 @@
 				Quisque aliquet quam vel magna placerat auctor.<br>
 				Nulla porttitor magna quis aliquam facilisis.<br>
 			</p>
+      <div class="row">
+        <%
+          words = ''
+          referrals_count = @user.referrals.count
+          if referrals_count == 1
+            words = 'friend has'
+          elsif
+            words = 'friends have'
+          end
+        %>
+        <% if referrals_count == 0 %>
+          <h2 class="step-title">No friends have joined...Yet!</h2>
+        <% else %>
+          <h2 class="step-title"><%= referrals_count %><%= words %> joined</h2>
+        <% end %>        
+      </div>			
 		</div>
 	</div>
 </div>
