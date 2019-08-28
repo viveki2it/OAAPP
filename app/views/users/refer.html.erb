@@ -20,7 +20,7 @@
         <p class="social-share">
           <% twitter_message = "Earn: Lorem ipsum dolor sit amet, consectetur adipiscing elit." %>  
           <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=OA" target="_blank"><img src="<%= asset_path('logo-fb.svg') %>" alt="Share on Facebook" /></a> 
-          <a target="_blank" href="https://www.instagram.com/"><img src="/assets/logo-in.svg" alt="Share on Instagram"></a>
+          <!--<a target="_blank" href="https://www.instagram.com/"><img src="/assets/logo-in.svg" alt="Share on Instagram"></a>-->
           <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" target="_blank"><img src="<%= asset_path('logo-twitter.svg') %>" alt="Share on Twitter" /></a>
         </p>                              
       </div>                       
@@ -40,28 +40,28 @@
 				<img class="step-img" src="/assets/001-support.svg" alt="5 FRIENDS">
 				<div class="step-body">
 					<h2 class="step-title">5 FRIENDS</h2>
-					<p class="step-content">Earn: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					<p class="step-content">Free Wipes</p>
 				</div>
 			</div>
 			<div class="col-md-3 text-center step">
 				<img class="step-img" src="/assets/002-team.svg" alt="10 FRIENDS">
 				<div class="step-body">
 					<h2 class="step-title">10 FRIENDS</h2>
-					<p class="step-content">Earn: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					<p class="step-content">Free Glacier Deo</p>
 				</div>
 			</div>    
 			<div class="col-md-3 text-center step">
 				<img class="step-img" src="/assets/003-community.svg" alt="15 FRIENDS">
 				<div class="step-body">
 					<h2 class="step-title">15 FRIENDS</h2>
-					<p class="step-content">Earn: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					<p class="step-content">Free Deo Kit</p>
 				</div>
 			</div>   
 			<div class="col-md-3 text-center step">
 				<img class="step-img" src="/assets/004-team-1.svg" alt="20 FRIENDS">
 				<div class="step-body">
 					<h2 class="step-title">20 FRIENDS</h2>
-					<p class="step-content">Earn: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					<p class="step-content">$50 Gift Card & Year Supply of Deo</p>
 				</div>
 			</div>  
 		</div>
@@ -70,33 +70,21 @@
 <div class="container-fluid concrete-wall-bg">
 	<div class="container steps">
 		<div class="row">
-			<p class="step-extra-content">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit consectetur elit, at eleifend felis consequat eget. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse tristique fermentum viverra. Cras varius ac mauris ut porttitor. Donec in posuere nunc. Nullam pulvinar libero vel nunc sagittis, ac consequat orci imperdiet. Ut tincidunt, magna sed lobortis pharetra, mauris diam suscipit nisl, lobortis finibus nulla tortor a diam. Suspendisse ipsum eros, bibendum a elit non, fermentum aliquet odio.
-				<br><br>
-				Sed aliquet diam vitae tellus molestie, at ornare dolor hendrerit. Pellentesque bibendum volutpat blandit. Proin placerat semper nibh id dapibus. Proin id ante ac urna fermentum condimentum nec et elit. Donec vel libero justo. Sed volutpat porta quam at tempus. Morbi quis elit vitae felis faucibus elementum. Donec felis diam, scelerisque et tortor a, sodales imperdiet mi. Proin sagittis est nibh, rutrum tristique neque condimentum sed.
-				<br><br>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
-				Duis ornare nulla a magna laoreet, eget condimentum nunc pellentesque.<br>
-				Quisque aliquet quam vel magna placerat auctor.<br>
-				Nulla porttitor magna quis aliquam facilisis.<br>
-			</p>
-      <div class="row">
-        <%
-          words = ''
-          referrals_count = @user.referrals.count
-          if referrals_count == 1
-            words = 'friend has'
-          elsif
-            words = 'friends have'
-          end
-        %>
-        <% if referrals_count == 0 %>
-          <h2 class="step-title">No friends have joined...Yet!</h2>
-        <% else %>
-          <h2 class="step-title"><%= referrals_count %> <%= words %> joined</h2>
-        <% end %>        
-      </div>			
-		</div>
+			<%
+				words = ''
+				referrals_count = @user.referrals.count
+				if referrals_count == 1
+					words = 'friend has'
+				elsif
+					words = 'friends have'
+				end
+			%>
+			<% if referrals_count == 0 %>
+				<h2 class="step-title">No friends have joined...Yet!</h2>
+			<% else %>
+				<h2 class="step-title"><%= referrals_count %> <%= words %> joined</h2>
+			<% end %>        
+		</div>			
 	</div>
 </div>
 <!-- Steps End -->
