@@ -23,11 +23,23 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
   </head>
 
-  <body>
+  <body style="background:#fff; color:#000;">
+    <!-- Top Bar Start -->
+
+    <header class="header">
+      <div class="container">
+        <div class="d-flex justify-content-center align-items-center">
+          <div class=""><img src="/assets/logo_OA_1x.png" srcset="/assets/logo_OA_2x.png 2x" alt="OA"></div>
+          <!--<div class=""><a class="lightblue" href="#">Pre-order Now</a></div>-->
+        </div>
+      </div>
+    </header>
+
+    <!-- Top Bar End -->  
     <%= yield %>
-    <%= render 'toastr_rails/flash' %>
+    <%= custom_bootstrap_flash %>
   </body>
 </html>

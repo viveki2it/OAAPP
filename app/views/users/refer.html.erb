@@ -1,99 +1,126 @@
-<!-- Header -->
-<style>
-    body{
-      background:#fff; color:#000;
-    }
-</style>
-<div class="container-fluid thankyouheaderbg">
-  <div class="row">
-    <div class="container">
-      <div class="col-md-6 col-xs-12 leftbox" style="padding-top:15px;">  
-
-      </div>		
-      <div class="col-md-5 col-xs-12 rightbox">  
-        <p class="title-thankyou">Thank you for signing up!</p>
-				<p class="title2-thankyou">Invite a friend & earn products</p>   
-        <p class="subtitle-thankyou">Share your unique link below via email or social media to earn free products depending on how many friends enter their email address.</p>                                                   
-        <p class="share-link">
-          <input class="input" id="share-link" type="text" value="<%= root_url %>?ref=<%= @user.referral_code %>" readonly><button class="btn-copy" onclick="copy()">COPY</button>
-        </p>
-        <p class="social-share">
-          <% twitter_message = "Earn: Lorem ipsum dolor sit amet, consectetur adipiscing elit." %>  
-          <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=OA" target="_blank"><img src="<%= asset_path('logo-fb.svg') %>" alt="Share on Facebook" /></a> 
-          <!--<a target="_blank" href="https://www.instagram.com/"><img src="/assets/logo-in.svg" alt="Share on Instagram"></a>-->
-          <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" target="_blank"><img src="<%= asset_path('logo-twitter.svg') %>" alt="Share on Twitter" /></a>
-        </p>                              
-      </div>                       
-    </div>		
-  </div>
-</div>
-<!-- Header End -->
-
-<!-- Steps Start -->
-<div class="container-fluid">
-	<div class="container steps">
-		<div class="row">
-			<h2 class="steps-header text-center">HERE’S HOW IT WORKS</h2>
-		</div>
-		<div class="row steps-body">
-			<div class="col-md-3 text-center step">
-				<img class="step-img" src="/assets/001-support.svg" alt="5 FRIENDS">
-				<div class="step-body">
-					<h2 class="step-title">5 FRIENDS</h2>
-					<p class="step-content">Free Wipes</p>
-				</div>
+<div class="thankyouheaderbg  d-flex align-items-center">
+	<div class="container">
+		<div class="row d-flex justify-content-between">
+			<div class="d-none d-lg-block col-lg-6 leftbox" style="padding-top:15px;">
 			</div>
-			<div class="col-md-3 text-center step">
-				<img class="step-img" src="/assets/002-team.svg" alt="10 FRIENDS">
-				<div class="step-body">
-					<h2 class="step-title">10 FRIENDS</h2>
-					<p class="step-content">Free Glacier Deo</p>
-				</div>
-			</div>    
-			<div class="col-md-3 text-center step">
-				<img class="step-img" src="/assets/003-community.svg" alt="15 FRIENDS">
-				<div class="step-body">
-					<h2 class="step-title">15 FRIENDS</h2>
-					<p class="step-content">Free Deo Kit</p>
-				</div>
-			</div>   
-			<div class="col-md-3 text-center step">
-				<img class="step-img" src="/assets/004-team-1.svg" alt="20 FRIENDS">
-				<div class="step-body">
-					<h2 class="step-title">20 FRIENDS</h2>
-					<p class="step-content">$50 Gift Card & Year Supply of Deo</p>
-				</div>
-			</div>  
+			<div class="col-lg-5 col-xs-12 rightbox">
+				<p class="title2-thankyou">Thank you for signing up!</p>
+				<p class="title-thankyou">Invite a friend<br>& earn products</p>
+				<p class="subtitle-thankyou">Share your unique link below via email or social media to earn free products
+					depending on how many friends enter their email address.</p>
+				<p class="share-link">
+					<input class="input" id="share-link" type="text" value="<%= root_url %>?ref=<%= @user.referral_code %>" readonly><button class="btn-copy" onclick="copy()">COPY</button>	
+				</p>
+				<p class="social-share">
+					<% twitter_message = "Earn: Lorem ipsum dolor sit amet, consectetur adipiscing elit." %>  
+					<a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=OA" target="_blank"><img src="<%= asset_path('logo-fb.svg') %>" alt="Share on Facebook" /></a> 
+					<a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" target="_blank"><img src="<%= asset_path('logo-twitter.svg') %>" alt="Share on Twitter" /></a>
+				</p> 
+			</div>
 		</div>
-	</div>  
-</div>
-<div class="container-fluid concrete-wall-bg">
-	<div class="container steps">
-		<div class="row">
-			<p class="step-extra-content">
-				Oars and Alps makes exceptional skincare and grooming products designed to go wherever you go, whether that's on your next adventure or your day-to-day routine. Our line is toxin-free, packed with antioxidants and made from the highest-quality natural ingredients -- so you can feel good about feeling good.
-			</p>
-		</div>	
-		<div class="row">
-			<%
-				words = ''
-				referrals_count = @user.referrals.count
-				if referrals_count == 1
-					words = 'friend has'
-				elsif
-					words = 'friends have'
-				end
-			%>
-			<% if referrals_count == 0 %>
-				<h2 class="step-title">No friends have joined...Yet!</h2>
-			<% else %>
-				<h2 class="step-title"><%= referrals_count %> <%= words %> joined</h2>
-			<% end %>        
-		</div>			
 	</div>
 </div>
-<!-- Steps End -->
+<!-- Steps Start -->
+<div class="container steps">
+	<div class="row justify-content-center">
+		<h2 class="steps-header text-center">HERE’S HOW IT WORKS</h2>
+	</div>
+	<div class="row justify-content-center steps-body">
+		<div class="col-sm-6 col-lg-4 step">
+			<div class="step-container">
+				<img class="step-img" src="/assets/001-support.svg" alt="5 FRIENDS">
+				<div class="step-body">
+					<h2 class="step-title">3 FRIENDS</h2>
+					<p class="step-content">Sampler Set: 1 Shine-Free, Ultra-Hydrating Lip Balm, 1 Mini Face + Eye Cream, 2
+						Cooling + Cleansing Wipes</p>
+				</div>
+			</div>
 
+		</div>
+		<div class="col-sm-6 col-lg-4 step">
+			<div class="step-container">
+				<img class="step-img" src="/assets/002-team.svg" alt="10 FRIENDS">
+				<div class="step-body">
+					<h2 class="step-title">6 FRIENDS</h2>
+					<p class="step-content">Natural Deodorant<br>(California Coast scent)</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-6 col-lg-4 step">
+			<div class="step-container">
+				<img class="step-img" src="/assets/004-team-1.svg" alt="15 FRIENDS">
+				<div class="step-body">
+					<h2 class="step-title">9 FRIENDS</h2>
+					<p class="step-content">Best Sellers Kit: Natural Deodorant (California Coast scent) + Wake Up Eye Stick</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-6 col-lg-4 step">
+			<div class="step-container">
+				<img class="step-img" src="/assets/003-community.svg" alt="20 FRIENDS">
+				<div class="step-body">
+					<h2 class="step-title">12 FRIENDS</h2>
+					<p class="step-content">Deo Trio Kit: 3 Natural Deodorants (California Coast, Fresh Ocean Splash, Eucalyptus
+						Spearmint)</p>
+				</div>
+			</div>
+		</div>
+		<div class="d-none d-sm-block col-sm-6 col-lg-4 text-center step space">
+			<img src="/assets/space.png" src="/assets/space@2x.png 2x">
+		</div>
+		<div class="col-sm-6 col-lg-4 step">
+			<div class="step-container">
+				<img class="step-img" src="/assets/005-community.svg" alt="20 FRIENDS">
+				<div class="step-body">
+					<h2 class="step-title">20 FRIENDS</h2>
+					<p class="step-content">1-year Supply of Natural Deodorant (6) + Face Kit (Face + Eye Cream, Wake Up Eye
+						Stick, Charcoal Solid Face Wash)</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-12 col-lg-8 info-extra">
+			<p class="step-content info-extra-text text-center">It's as easy as sending out a quick email with your custom
+				link to a few friends or sharing on social using the links above. Each one of your referrals that comes to the
+				site and enters their email will give you credit towards the above milestones.</p>
+		</div>
+	</div>
+	<div class="row justify-content-center steps-body">
+		<%
+			words = ''
+			referrals_count = @user.referrals.count
+			if referrals_count == 1
+				words = 'friend has'
+			elsif
+				words = 'friends have'
+			end
+		%>
+		<% if referrals_count == 0 %>
+			<h2 class="step-title">No friends have joined...Yet!</h2>
+		<% else %>
+			<h2 class="step-title"><%= referrals_count %> <%= words %> joined</h2>
+		<% end %>        
+	</div>		
+</div>
+<!-- Steps End -->
+<div class="footer">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-5 col-xs-12">
+
+				<p class="title2-thankyou">INVITE A FRIEND & EARN PRODUCTS</p>
+				<p class="share-link">
+					<input class="input" id="share-link" type="text" value="<%= root_url %>?ref=<%= @user.referral_code %>" readonly><button class="btn-copy dark-blue" onclick="copy()">COPY</button>	
+				</p>
+				<p class="text-share">SHARE ON SOCIAL</p>
+				<p class="social-share">
+					<% twitter_message = "Earn: Lorem ipsum dolor sit amet, consectetur adipiscing elit." %>  
+					<a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=OA" target="_blank"><img src="<%= asset_path('logo-fb.svg') %>" alt="Share on Facebook" /></a> 
+					<a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" target="_blank"><img src="<%= asset_path('logo-twitter.svg') %>" alt="Share on Twitter" /></a>
+				</p>					
+			</div>
+		</div>
+	</div>
+</div>
 <script>
 function copy() {
   /* Get the text field */

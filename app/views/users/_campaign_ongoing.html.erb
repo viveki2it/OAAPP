@@ -1,31 +1,92 @@
-<!-- Form Start -->               
-<div class="container-fluid homeheaderbg2">
-  <div class="container">  
-    <div class="row">                                                    
-      <div class="form2">
-        <div class="photo">
-          <img src="/assets/rectangle.png" srcset="/assets/rectangle-2x.png" alt="OA" />
-        </div>
-        <div class="formbox">
-          <div class="borde"></div>
-          <div class="content-close"><button class="btn-close">X</button></div>
-          <div class="head-formbox">
-            <p><img src="<%= asset_path('logoOA.svg') %>" alt="OA"/></p>
-          </div>       
-          <div class="content-formbox">
-            <p class="popup-title">Be the first to know! </p>
-            <p class="popup-subtitle">About new products, events and more…</p>
+<!-- Header -->
+<div class="indexheaderbg  d-flex align-items-center">
+  <div class="container">
+    <div class="row d-flex justify-content-between">
+      <div class="col-xs-12 col-lg-7 d-flex align-items-center leftbox">
+        <img src="assets/hero-index.png" srcset="assets/hero-index@2x.png 2x">
+      </div>
+      <div class="d-flex flex-column align-items-center justify-content-center col-lg-5 col-xs-12 rightbox">
 
-            <%= form_for @user, :url => { :action => "create" }, :html => {:class => "form-inline"} do |f| %>
-              <%= f.text_field :first_name, :placeholder => "Enter First Name", :class => "emailbox2" %> <br> 
-              <%= f.text_field :email, :placeholder => "Enter Email", :class => "emailbox2" %> <br> 
-              <input class="btn lightblue" type="submit" value="Register" />
-            <% end %>
-          </div> 
-        </div>  
-        <div class="clearfix"></div>  
+        <p class="title-thankyou">Would you like to receive a<br>yearly supply of deodorant?</p>
+        <p class="title2-thankyou">Sign up below and you will receive instructions on how to get it!</p>
+        <%= form_for @user, :url => { :action => "create" } do |f| %>
+          <p class="share-link-index">
+            <%= f.text_field :email, :placeholder => "Your email", class: "input" %>
+            <button class="btn-copy" type='submit'>Come inside & be the first to know</button>
+          </p>
+        <% end %>
+
       </div>
     </div>
   </div>
 </div>
-<!-- Form End -->  
+
+<!-- Header End -->
+
+<!-- Steps Start -->
+<div class="container steps steps-index">
+  <div class="row justify-content-center">
+    <div class="col-sm-12">
+      <h2 class="steps-header text-center">SOME OF OUR PRODUCT BENEFITS</h2>
+    </div>
+  </div>
+  <div class="row justify-content-center justify-content-lg-between steps-body">
+    <div class="col-6 col-md-4 col-lg-2 text-center step">
+      <div class="step-img-container d-flex align-items-center text-center">
+        <img class="step-img" src="assets/sketchy-fly.svg">
+      </div>
+      <div class="step-body text-center">
+        <p class="step-content text-center">Travel/<br>TSA-friendly</p>
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-2 text-center step">
+      <div class="step-img-container d-flex align-items-center text-center">
+        <img class="step-img" src="assets/sketchy-travel.svg">
+      </div>
+      <div class="step-body text-center">
+        <p class="step-content text-center">Spill proof.<br>Great for your bag</p>
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-2 text-center step">
+      <div class="step-img-container d-flex align-items-center text-center">
+        <img class="step-img" src="assets/sketchy-rotate.svg">
+      </div>
+      <div class="step-body text-center">
+        <p class="step-content text-center">Good for any<br>skin type</p>
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-2 text-center step">
+      <div class="step-img-container d-flex align-items-center text-center">
+        <img class="step-img" src="assets/shape.svg">
+      </div>
+      <div class="step-body text-center">
+        <p class="step-content text-center">Natural<br>ingredients</p>
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-2 text-center step">
+      <div class="step-img-container d-flex align-items-center text-center">
+        <img class="step-img" src="assets/bunny.svg">
+      </div>
+      <div class="step-body text-center">
+        <p class="step-content text-center">Never tested on<br>animals</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Steps End -->
+
+<div class="footer">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-5 col-xs-12">
+        <p class="title2-thankyou">INVITE A FRIEND & EARN PRODUCTS</p>
+        <%= form_for @user, :url => { :action => "create" } do |f| %>
+          <p class="share-link-index">
+            <%= f.text_field :email, :placeholder => "Your email", class: "input" %>
+            <button class="btn-copy dark-blue" type='submit'>Come inside & be the first to know</button>
+          </p>
+        <% end %>        
+      </div>
+    </div>
+  </div>
+</div>
