@@ -29,9 +29,10 @@
             <td
               style="padding: 34px 0 27px; border-top:1px solid #00293c; border-left:1px solid #00293c; border-right:1px solid #00293c;">
               <center>
-                <img align="bottom" alt="Company Logo" border="0" src="<%= Rails.application.config.action_mailer.default_url_options[:host] %>/assets/email/logo-OA.svg"
+                <img align="bottom" alt="OA" border="0" src="<%= Rails.application.config.action_mailer.default_url_options[:host] %>/assets/email/logo-OA.png"
+                  srcset="<%= Rails.application.config.action_mailer.default_url_options[:host] %>/assets/email/logo-OA@2x.png 2x"
                   style="margin: 0; margin-right: 0px; margin-left: 0px; padding: 0; background: none; border: none; white-space: normal; line-height: normal;"
-                  title="Company Logo" width="69" />
+                  width="69" />
               </center>
             </td>
           </tr>
@@ -42,10 +43,8 @@
           <tr>
             <td style="padding: 22px 0 0; border-left:1px solid #00293c; border-right:1px solid #00293c;">
               <center>
-                <img align="bottom" alt="Interesting Image" border="0" src="<%= Rails.application.config.action_mailer.default_url_options[:host] %>/assets/email/hero.png"
-                  srcset="<%= Rails.application.config.action_mailer.default_url_options[:host] %>/assets/email/hero-2x.png 2x"
-                  style="margin: 0; margin-right: auto; margin-left: auto; padding: 0; background: none; border: none; white-space: normal; line-height: normal; width:100%; max-width: 467px;"
-                  title="Interesting Image" />
+                <img align="bottom" alt="" border="0" src="<%= Rails.application.config.action_mailer.default_url_options[:host] %>/assets/email/hero.png" srcset="<%= Rails.application.config.action_mailer.default_url_options[:host] %>/assets/email/hero-2x.png 2x"
+                  style="margin: 0; margin-right: auto; margin-left: auto; padding: 0; background: none; border: none; white-space: normal; line-height: normal; width:100%; max-width: 467px;" />
               </center>
             </td>
           </tr>
@@ -74,7 +73,7 @@
                 width='200' cellspacing='0' cellpadding='0' align="center" bgcolor="#FFFFFF">
                 <tr>
                   <td style="padding: 0px 0px 50px; vertical-align: top;" width="33%" align="center">
-                    <img src="<%= Rails.application.config.action_mailer.default_url_options[:host] %>/assets/email/step1.svg" alt="Step 1"
+                    <img src="<%= Rails.application.config.action_mailer.default_url_options[:host] %>/assets/email/001-support.png" srcset="<%= Rails.application.config.action_mailer.default_url_options[:host] %>/assets/email/001-support@2x.png 2x" alt="Step 1"
                       style="display: block; margin: 0; padding: 0; border: 0;">
                     <h1
                       style="font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', serif; font-size: 1rem; color: #00293c; letter-spacing: normal; text-transform: uppercase; margin-top: 20px;">
@@ -86,7 +85,7 @@
                     </p>
                   </td>
                   <td style="padding: 0px 0px 50px; vertical-align: top;" width="33%" align="center">
-                    <img src="<%= Rails.application.config.action_mailer.default_url_options[:host] %>/assets/email/step2.svg" alt="Step 2"
+                    <img src="<%= Rails.application.config.action_mailer.default_url_options[:host] %>/assets/email/002-team.png" srcset="<%= Rails.application.config.action_mailer.default_url_options[:host] %>/assets/email/002-team@2x.png 2x" alt="Step 2"
                       style="display: block; margin: 0; padding: 0; border: 0;">
                     <h1
                       style="font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', serif; font-size: 1rem; color: #00293c; letter-spacing: normal; text-transform: uppercase; margin-top: 20px;">
@@ -97,7 +96,7 @@
                     </p>
                   </td>
                   <td style="padding: 0px 0px 50px; vertical-align: top;" width="33%" align="center">
-                    <img src="<%= Rails.application.config.action_mailer.default_url_options[:host] %>/assets/email/step2.svg" alt="Step 2"
+                    <img src="<%= Rails.application.config.action_mailer.default_url_options[:host] %>/assets/email/003-team.png" srcset="<%= Rails.application.config.action_mailer.default_url_options[:host] %>/assets/email/003-team@2x.png 2x" alt="Step 3"
                       style="display: block; margin: 0; padding: 0; border: 0;">
                     <h1
                       style="font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', serif; font-size: 1rem; color: #00293c; letter-spacing: normal; text-transform: uppercase; margin-top: 20px;">
@@ -123,7 +122,7 @@
                 <tr>
                   <td></td>
                   <td style="vertical-align: top; padding: 0px 5px;" width="50%" align="center">
-                    <img src="<%= Rails.application.config.action_mailer.default_url_options[:host] %>/assets/email/step3.svg" alt="Step 3"
+                    <img src="<%= Rails.application.config.action_mailer.default_url_options[:host] %>/assets/email/004-community.png" srcset="<%= Rails.application.config.action_mailer.default_url_options[:host] %>/assets/email/004-community@2x.png 2x" alt="Step 4"
                       style="display: block; margin: 0; padding: 0; border: 0;">
                     <h1
                       style="font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', serif; font-size: 1rem; color: #00293c; letter-spacing: normal; text-transform: uppercase; margin-top: 20px;">
@@ -134,8 +133,8 @@
                     </p>
                   </td>
                   <td style="vertical-align: top; padding: 0px 5px;" width="50%" align="center">
-                    <img src="<%= Rails.application.config.action_mailer.default_url_options[:host] %>/assets/email/step4.svg" alt="Step 4"
-                      style="display: block; margin: 0; padding: 0; border: 0;">
+                    <img src="<%= Rails.application.config.action_mailer.default_url_options[:host] %>/assets/email/005-community.png" srcset="<%= Rails.application.config.action_mailer.default_url_options[:host] %>/assets/email/005-community@2x.png 2x" alt="Step 5"
+                      style="display: block; margin: 0; padding: 0; border: 0; max-height:73px;">
                     <h1
                       style="font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', serif; font-size: 1rem; color: #00293c; letter-spacing: normal; text-transform: uppercase; margin-top: 20px;">
                       20 Friends</h1>
@@ -188,8 +187,7 @@
                 <p
                   style="font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', serif; font-size: 16px; color: #00293c; text-align: left; letter-spacing: normal; line-height: 1.81;">
                   To view how many referrals you have at any time, click the link below<br>
-                  <strong>View Link:</strong> 
-                  <%= link_to @user.user_url(root_url), @user.user_url(root_url), 'target' => "_blank" %>
+                  <strong>View Link:</strong> <%= link_to @user.user_url(root_url), @user.user_url(root_url), 'target' => "_blank" %>
                 </p>
               </center>
             </td>
