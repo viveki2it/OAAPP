@@ -53,7 +53,7 @@ body{margin:0px; padding:0px; background:#fff; color:#060506; font-family: 'Robo
 }
 
 .thankyouheaderbg{
-    background: url(/assets/banner-thank-you.jpg) top center no-repeat;
+    background: url(/assets/bg-thank-you@2x.png) top center no-repeat;
     background-attachment:scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -177,9 +177,9 @@ body{margin:0px; padding:0px; background:#fff; color:#060506; font-family: 'Robo
 }
 .step.space img{
     position: absolute;
-    width: calc(100% + 5px);
     left: 15px;
-    top: -18px;
+    top: 0;
+    width: calc(100% - 30px);
 }
 .step-container{
     border: solid 1px #eaeaea;
@@ -194,7 +194,7 @@ body{margin:0px; padding:0px; background:#fff; color:#060506; font-family: 'Robo
     font-size: 20px;
     font-weight: bold;
     line-height: 1.45;
-    text-align: left;
+    text-align: center;
     color: #00293c;
     margin-top: 15px;
     margin-bottom: 0px;
@@ -215,7 +215,7 @@ body{margin:0px; padding:0px; background:#fff; color:#060506; font-family: 'Robo
     font-family: "Roboto", Helvetica, Arial, sans-serif;
     font-size: 1rem;
     line-height: 1.75;
-    text-align: left;
+    text-align: center;
     color: #012b3a;
     margin: 0px;
 }
@@ -254,9 +254,7 @@ img{
 
 .step-img{
     height: auto;
-    /*width: 100%;
-    max-width: 116px;*/
-    max-height: 74px;
+    max-height: 239px;
     margin: auto;
 }
 .step:nth-child(n+4){
@@ -264,7 +262,6 @@ img{
 }   
 @media (max-width:991px){
     .thankyouheaderbg{
-        background-image: none;
         background-color: rgba(129, 129, 129, 0.1);  
     }
     .thankyouheaderbg .rightbox{
