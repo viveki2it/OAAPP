@@ -70,7 +70,7 @@ body{margin:0px; padding:0px; background:#fff; color:#060506; font-family: 'Robo
 
 .title-thankyou{
     font-family: "Museo", Helvetica, Arial, sans-serif;
-    font-size: 46.2px;
+    font-size: 32px;
     font-weight: bold;
     line-height: 1.02;
     text-align: center;
@@ -81,7 +81,7 @@ body{margin:0px; padding:0px; background:#fff; color:#060506; font-family: 'Robo
 
 .title2-thankyou{
     font-family: "Museo", Helvetica, Arial, sans-serif;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 500;
     line-height: 1.71;
     text-align: center;
@@ -90,7 +90,7 @@ body{margin:0px; padding:0px; background:#fff; color:#060506; font-family: 'Robo
 }
 .indexheaderbg .title2-thankyou{font-size: 22px;}
 .subtitle-thankyou{
-    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-family: "Museo", Helvetica, Arial, sans-serif;
     font-size: 18px;
     font-weight: normal;
     line-height: 1.78;
