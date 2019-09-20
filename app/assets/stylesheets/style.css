@@ -259,7 +259,27 @@ img{
 }
 .step:nth-child(n+4){
     margin-bottom: 0px;
-}   
+}
+@media (min-width:992px){
+	.thankyouheaderbg {
+		position: relative;
+		height: auto;
+		padding: 80px 0px;
+	}
+	.indexheaderbg{
+		position: relative;
+		height: auto;
+		padding: 80px 0px;
+	}
+}
+@media (min-width:992px) and (max-width:1440px){
+	
+	.leftbox{
+		position: absolute;
+		left: 0;
+	}
+	.indexheaderbg .leftbox{ top:40px;}
+}  
 @media (max-width:991px){
     .thankyouheaderbg{
         background-color: rgba(129, 129, 129, 0.1);  
