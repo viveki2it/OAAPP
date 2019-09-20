@@ -70,33 +70,33 @@ body{margin:0px; padding:0px; background:#fff; color:#060506; font-family: 'Robo
 
 .title-thankyou{
     font-family: "Museo", Helvetica, Arial, sans-serif;
-    font-size: 32px;
+    font-size: 42px;
     font-weight: bold;
-    line-height: 1.02;
+    line-height: 1;
     text-align: center;
     color: #025a77;
-    margin-bottom: 5px;
+    margin-bottom: 30px;
 }
-.indexheaderbg .title-thankyou{font-size: 32px;}
+.indexheaderbg .title-thankyou{font-size: 34px;}
 
 .title2-thankyou{
     font-family: "Museo", Helvetica, Arial, sans-serif;
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 500;
-    line-height: 1.71;
+    line-height: 1.25;
     text-align: center;
     color: #00293c;
-    margin-bottom: 2px;
+    margin-bottom: 30px;
 }
-.indexheaderbg .title2-thankyou{font-size: 22px;}
+.indexheaderbg .title2-thankyou{font-size: 24px;}
 .subtitle-thankyou{
     font-family: "Museo", Helvetica, Arial, sans-serif;
     font-size: 18px;
     font-weight: normal;
-    line-height: 1.78;
+    line-height: 1.25;
     text-align: center;
     color: #00293c;
-    margin-bottom: 22px;
+    margin-bottom: 30px;
     padding: 0px 20px;
 }
 
@@ -141,7 +141,7 @@ body{margin:0px; padding:0px; background:#fff; color:#060506; font-family: 'Robo
 }                         
 .share-link-index{
     text-align: center;
-    margin-top: 15px;
+    margin: 0px;
 }
 .share-link-index .input{
     width: 100%;
