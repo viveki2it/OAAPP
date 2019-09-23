@@ -272,6 +272,15 @@ img{
 		padding: 80px 0px;
 	}
 }
+@media(min-width:1441px){
+	.thankyouheaderbg .container .justify-content-end,.indexheaderbg .container .justify-content-end{
+		position: relative;
+	}
+	.thankyouheaderbg .container .justify-content-end .leftbox,.indexheaderbg .container .justify-content-end .leftbox{
+		position: absolute;
+		left: -80px;
+	}
+}
 @media (min-width:992px) and (max-width:1440px){
 	
 	.leftbox{
