@@ -8,11 +8,11 @@
       <div class="d-flex flex-column align-items-center justify-content-center col-lg-5 col-xs-12 rightbox">
 
         <p class="title-thankyou">Want to receive a year’s supply of deodorant and other free products?</p>
-        <p class="title2-thankyou">Sign up below and you will receive instructions on how to get it!</p>
+        <p class="title2-thankyou">Join our 30-Day Refer a Friend Challenge and learn how to get free products now</p>
         <%= form_for @user, :url => { :action => "create" } do |f| %>
           <p class="share-link-index">
             <%= f.text_field :email, :placeholder => "Your email", class: "input" %>
-            <button class="btn-copy" type='submit'>Sign Up + Be the First to Know</button>
+            <button class="btn-copy" type='submit'>Join Now</button>
           </p>
         <% end %>
 
