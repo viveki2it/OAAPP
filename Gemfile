@@ -68,3 +68,5 @@ gem 'bootstrap', '~> 4.3.1'
 gem 'sassc-rails', '>= 2.1.0'
 gem 'toastr-rails'
 gem 'jquery-rails'
+#background Jobs
+gem 'sidekiq'
