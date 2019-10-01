@@ -5,13 +5,16 @@
 				<img src="/assets/oa-dopp-products.png" srcset="/assets/oa-dopp-products@2x.png 2x">
 			</div>
 			<div class="col-lg-5 col-xs-12 rightbox">
-				<p class="title2-thankyou">Thank you for signing up!</p>
-				<p class="title-thankyou">Invite friends<br>& earn products</p>
-				<p class="subtitle-thankyou">Share your unique link below via email or social media to earn free products
-					depending on how many friends enter their email address.</p>
+				<p class="title-thankyou"> Thanks for signing up to Oars + Alps!</p>
+				<p class="subtitle-thankyou"> Look for your welcome email with your 15% discount.<br><br>
+					To get additional offers such as free products, invite more friends to join the Oars + Alps newsletter and
+					gift them 15% off as well.<br><br>
+					Simply share your unique URL below.
+				</p>
 				<p class="share-link">
 					<input class="input" id="share-link" type="text" value="<%= root_url %>?ref=<%= @user.referral_code %>" readonly><button class="btn-copy" onclick="copy()">COPY</button>	
 				</p>
+				<p class="subtitle-thankyou">Scroll down to see the free products you can earn!</p>
 				<p class="social-share">
 					<% twitter_message = "Natural, Moisturizing, and Hydrating products to leave you feeling rejuvenated and refreshed." %>  
 					<a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=OA" target="_blank"><img src="<%= asset_path('logo-fb.svg') %>" alt="Share on Facebook" /></a> 
@@ -79,28 +82,44 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-sm-12 col-lg-8 info-extra">
-			<p class="step-content info-extra-text text-center">It's as easy as sending out a quick email with your custom
-				link to a few friends or sharing on social using the links above. Each one of your referrals that comes to the
-				site and enters their email will give you credit towards the above milestones.</p>
+		<div class="col-sm-12 col-lg-6 info-extra">
+				<p class="title-thankyou">The Details:</p>
+				<p class="step-content info-extra-text text-center">
+					1) Share your unique link with friends and family, offering them 15% off their first Oars + Alps order
+				</p>
+				<p class="step-content info-extra-text text-center">
+					2) When a friend registers using your link, your Friend tally increases!
+				</p>
+				<p class="step-content info-extra-text text-center">
+					3) As more of your friends register, you accelerate to higher tiers
+				</p>
+				<p class="step-content info-extra-text text-center">
+					4) At the end of 30 days, we'll ship you your free products!
+				</p>
+			</div>
+	</div>
+	<div class="row justify-content-center tally">
+		<div class="col-12">
+			<h2 class="tally-header text-center">Your Friend Tally</h2>			
+			<p class="tally-text text-center">
+				<span>
+					<%
+						words = ''
+						referrals_count = @user.referrals.count
+						if referrals_count == 1
+							words = 'friend has'
+						elsif
+							words = 'friends have'
+						end
+					%>
+					<% if referrals_count == 0 %>No friends have joined...Yet!
+					<% else %>
+						<%= referrals_count %> <%= words %> joined
+					<% end %> 
+				</span>
+			</p>
 		</div>
 	</div>
-	<div class="row justify-content-center steps-body">
-		<%
-			words = ''
-			referrals_count = @user.referrals.count
-			if referrals_count == 1
-				words = 'friend has'
-			elsif
-				words = 'friends have'
-			end
-		%>
-		<% if referrals_count == 0 %>
-			<h2 class="step-title">No friends have joined...Yet!</h2>
-		<% else %>
-			<h2 class="step-title"><%= referrals_count %> <%= words %> joined</h2>
-		<% end %>        
-	</div>		
 </div>
 <!-- Steps End -->
 <div class="footer">
@@ -118,6 +137,7 @@
 					<a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=OA" target="_blank"><img src="<%= asset_path('logo-fb.svg') %>" alt="Share on Facebook" /></a> 
 					<a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" target="_blank"><img src="<%= asset_path('logo-twitter.svg') %>" alt="Share on Twitter" /></a>
 				</p>
+				<p class="text-visit"><a href="https://www.oarsandalps.com/">Visit oarsandalps.com</a></p>					
 				<div class="text-center">
 					<%= link_to 'Privacy & Terms', "https://www.oarsandalps.com/pages/privacy", target: '_blank', class: "privacy-link" %>
 				</div>									

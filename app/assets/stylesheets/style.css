@@ -70,9 +70,9 @@ body{margin:0px; padding:0px; background:#fff; color:#060506; font-family: 'Robo
 
 .title-thankyou{
     font-family: "Museo", Helvetica, Arial, sans-serif;
-    font-size: 42px;
+    font-size: 34px;
     font-weight: bold;
-    line-height: 1;
+    line-height: normal;
     text-align: center;
     color: #025a77;
     margin-bottom: 30px;
@@ -91,13 +91,12 @@ body{margin:0px; padding:0px; background:#fff; color:#060506; font-family: 'Robo
 .indexheaderbg .title2-thankyou{font-size: 24px;}
 .subtitle-thankyou{
     font-family: "Museo", Helvetica, Arial, sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: normal;
     line-height: 1.25;
     text-align: center;
     color: #00293c;
     margin-bottom: 30px;
-    padding: 0px 20px;
 }
 
 .form{ margin: 0 auto; text-align:center; margin-bottom:20px; padding-top:15px;}     
@@ -225,6 +224,7 @@ body{margin:0px; padding:0px; background:#fff; color:#060506; font-family: 'Robo
 }
 .info-extra-text{
     font-size: 1.17rem;
+	margin-bottom:20px !important;
 }
 .topbg{ background:#B28A35; height:40px;color:#fff; text-align:center; padding-top:8px;}                          
 
@@ -260,6 +260,47 @@ img{
 .step:nth-child(n+4){
     margin-bottom: 0px;
 }
+.row.justify-content-center.tally {
+    margin-top: 60px;
+}
+.tally-header.text-center {
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-size: 38px;
+    font-weight: 500;
+    text-align: center;
+    color: #00293c;
+    margin-bottom: 20px;
+}
+.tally-text {
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.45;
+    color: #00293c;
+    margin-bottom: 0px;
+}
+.tally-text span{
+    padding: 20px 40px;
+    display: block;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+    border: solid 1px #eaeaea;
+}
+
+.text-visit{
+	margin-top:20px;
+	text-align: center;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.61;
+    color: #012b3a;
+}
+.text-visit a{
+	color:inherit;
+}
 @media (min-width:992px){
 	.thankyouheaderbg {
 		position: relative;
@@ -270,6 +311,9 @@ img{
 		position: relative;
 		height: auto;
 		padding: 80px 0px;
+	}
+	.info-extra > :nth-child(3){
+		margin:0px -30px;
 	}
 }
 @media(min-width:1441px){
