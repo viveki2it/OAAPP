@@ -19,12 +19,12 @@ ActiveAdmin.register User do
     column :email
     column :referral_code
     column :referrer_id
-    column "referrals count" do |user|
+    column "Referrals Count" do |user|
       user.referrals.count  
     end
     column :created_at
     column :updated_at
-    column "referral link" do |user|
+    column "Referral Link" do |user|
       link_to("Link", user.user_url(root_url), target: '_blank')
     end
     actions
