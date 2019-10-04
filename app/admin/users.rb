@@ -24,6 +24,9 @@ ActiveAdmin.register User do
     end
     column :created_at
     column :updated_at
+    column "referral link" do |user|
+      link_to("Link", user.user_url(root_url), target: '_blank')
+    end
     actions
   end
 
