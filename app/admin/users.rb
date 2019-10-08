@@ -5,7 +5,7 @@ ActiveAdmin.register User do
   filter :referral_code
   filter :created_at
   filter :updated_at
-    
+
   csv do
     column :id
     column :email
@@ -18,7 +18,7 @@ ActiveAdmin.register User do
     column :updated_at
   end
 
-  actions :index, :show, :destroy
+  actions :index, :edit, :show, :destroy, :update
   
   index download_links: [:csv] do
     column :id
