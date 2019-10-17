@@ -70,3 +70,4 @@ gem 'toastr-rails'
 gem 'jquery-rails'
 #background Jobs
 gem 'sidekiq'
+gem 'newrelic_rpm'
