@@ -32,9 +32,6 @@ ActiveAdmin.register User do
     column "Referrals Count" do |user|
       user.referrals.count  
     end
-    column "Referral emails" do |user|
-      user.referrals.map(&:email).join(',')
-    end    
     column :created_at
     column :updated_at
     column "View Referrals" do |user|
