@@ -8,9 +8,9 @@ class UserMailer < ActionMailer::Base
     mail(:to => user.email, :subject => "Thanks for signing up!")
   end
 
-  def thank_you_email(user, email)
+  def thank_you_email(user)
     @user = user
 
-    mail(:to => email, :subject => "Thank you for participating!")
+    mail(:to => user.email, :subject => "Thank you for participating!")
   end
 end

@@ -13,6 +13,18 @@ class User < ApplicationRecord
     root_url + "users/" + referral_code
   end  
 
+  def send_thankyou_email
+    User.all.each do |user|
+      address = ValidEmail2::Address.new(user.email)
+      if address.valid? && address.valid_mx?
+        UserMailer.thank_you_email(user).deliver_later
+        puts "Thankyou eamil sent: #{user.email}"
+      else
+        puts "Failed eamil sent: #{user.email}"
+      end
+    end
+  end
+
   private
 
   def create_referral_code
