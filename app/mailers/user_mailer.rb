@@ -11,6 +11,6 @@ class UserMailer < ActionMailer::Base
   def thank_you_email(user, email)
     @user = user
 
-    mail(:to => email, :subject => "Refer a friend challenge!")
+    mail(:to => email, :subject => "Thank you for participating!")
   end
 end
