@@ -7,7 +7,7 @@ class User < ApplicationRecord
   validates :referral_code, uniqueness: true
 
   before_create :create_referral_code
-  after_create :send_welcome_email
+  # after_create :send_welcome_email
   
   def user_url(root_url)
     root_url + "users/" + referral_code
